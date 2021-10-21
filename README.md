@@ -7,3 +7,18 @@ Project that I had to do during my studies. Replicates the Othello also knwon as
 * Java
 * Maven
 * JavaFX
+
+## Run
+
+In the root folder run:
+
+```console
+mvn javafx:run
+```
+
+or
+
+```console
+mvn package
+java -jar target/othello-1.0.0-shaded.jar
+```
