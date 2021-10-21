@@ -22,7 +22,7 @@ import youdev97.othello.model.Position;
 /**
  * class that represent the cells of the baord, draw if there's pawn
  * manage action clicks on each one
- * @author Younes
+ * @author youdev97
  */
 public class Cell extends StackPane {
 

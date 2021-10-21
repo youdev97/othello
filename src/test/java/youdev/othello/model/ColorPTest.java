@@ -21,7 +21,7 @@ import youdev97.othello.model.ColorP;
 
 /**
  *
- * @author Younes
+ * @author youdev97
  */
 public class ColorPTest {
     

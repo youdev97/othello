@@ -30,7 +30,7 @@ import youdev97.othello.model.Position;
 
 /**
  *
- * @author Younes
+ * @author youdev97
  */
 public class BoardTest {
 

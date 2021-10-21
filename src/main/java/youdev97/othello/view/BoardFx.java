@@ -14,7 +14,7 @@ import youdev97.othello.model.Observer;
 
 /**
  *
- * @author Younes
+ * @author youdev97
  */
 public class BoardFx extends GridPane implements Observer {
 

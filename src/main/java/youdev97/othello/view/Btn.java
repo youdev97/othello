@@ -15,8 +15,8 @@ import javafx.stage.Stage;
 import youdev97.othello.model.Facade;
 
 /**
- * class that 3 button and set them style and action
- * @author Younes
+ * Set 3 game's button Abandon, Pass, Restart and give them style and action
+ * @author youdev97
  */
 public class Btn extends HBox {
 

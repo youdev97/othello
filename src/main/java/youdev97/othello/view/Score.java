@@ -19,7 +19,7 @@ import youdev97.othello.model.Observer;
 /**
  * class that set a visual score
  * 
- * @author Younes
+ * @author youdev97
  */
 public class Score extends VBox implements Observer {
 

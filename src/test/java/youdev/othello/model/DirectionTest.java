@@ -26,7 +26,7 @@ import youdev97.othello.model.Direction;
 
 /**
  *
- * @author Younes
+ * @author youdev97
  */
 public class DirectionTest {
     
