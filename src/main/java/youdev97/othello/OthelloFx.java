@@ -2,9 +2,6 @@ package youdev97.othello;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -28,12 +25,6 @@ public class OthelloFx extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-       //menu bar
-        MenuBar menuBar = new MenuBar();       
-        Menu menu = new Menu("File");
-        menu.getItems().add(new MenuItem("Edit")); 
-        menuBar.getMenus().add(menu);
-        menuBar.prefWidthProperty().bind(primaryStage.widthProperty());
         
         board = new Board();
         score = new Score((Observable) board);
@@ -50,7 +41,7 @@ public class OthelloFx extends Application {
         
         VBox root = new VBox();
         root.setStyle("-fx-background-color: #DCDCDC;");
-        root.getChildren().addAll(menuBar,all);
+        root.getChildren().addAll(all);
         
         Scene scene = new Scene(root, 1000, 750);
         primaryStage.setScene(scene);

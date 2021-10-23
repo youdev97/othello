@@ -39,7 +39,8 @@ public class ScoreGraph extends HBox implements Observer {
         
         lineChart = new LineChart<Number, Number>(xAxis, yAxis);
         lineChart.setTitle("Score Othello");
-        
+        blackLine.setName("Black");
+        whiteLine.setName("White");
         white = board.cntColor(ColorP.WHITE);
         black = board.cntColor(ColorP.BLACK);
         blackLine.getData().add(new XYChart.Data(0, 2));
