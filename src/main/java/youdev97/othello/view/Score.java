@@ -57,23 +57,22 @@ public class Score extends VBox implements Observer {
 		scoreWhite.setFont(Font.font("Helvetica", FontWeight.BLACK, 16));
 		scoreWhite.setStyle("-fx-border-color: white; -fx-border-width: 3;");
 		scoreWhite.setTextFill(Color.WHITE);
-		scoreWhite.setOpacity(0.2);
 
 		// set labels in hbox
 		HBox hb = new HBox(10);
 		hb.getChildren().addAll(lblScore, scoreBlack, scoreWhite);
 
-		// labels total de prises
-		lblTotal = new Label(" Total: ");
+		// labels switched/taken pieces
+		lblTotal = new Label(" Taken Pieces: ");
 		lblTotal.setFont(Font.font("TimesRoman", FontWeight.BLACK, 16));
 		lblTotal.setTextFill(Color.DARKGRAY);
 
-		totalBlack = new Label("TOTALBLACK = 0");
+		totalBlack = new Label("BLACK = 0");
 		totalBlack.setFont(Font.font("Helvetica", FontWeight.BLACK, 16));
 		totalBlack.setStyle("-fx-border-color: black; -fx-border-width: 3;");
 		totalBlack.setTextFill(Color.BLACK);
 
-		totalWhite = new Label("TOTALWHITE = 0");
+		totalWhite = new Label("WHITE = 0");
 		totalWhite.setFont(Font.font("Helvetica", FontWeight.BLACK, 16));
 		totalWhite.setStyle("-fx-border-color: white; -fx-border-width: 3;");
 		totalWhite.setTextFill(Color.WHITE);
@@ -103,25 +102,13 @@ public class Score extends VBox implements Observer {
 	 */
 	@Override
 	public void update() {
-		totalBlack.setText("TOTALBLACK = " + (int) board.getPosSwitchedB().size());
-		totalWhite.setText("TOTALWHITE = " + (int) board.getPosSwitchedW().size());
+		totalBlack.setText("BLACK = " + (int) board.getPosSwitchedB().size());
+		totalWhite.setText("WHITE = " + (int) board.getPosSwitchedW().size());
 		white = board.cntColor(ColorP.WHITE);
 		black = board.cntColor(ColorP.BLACK);
 		wall = board.cntColor(ColorP.WALL);
 		scoreBlack.setText("BLACK = " + (int) black);
 		scoreWhite.setText("WHITE = " + (int) white);
-		switch (board.getCurrentPlayer().getColor()) {
-		case WHITE:
-			scoreBlack.setOpacity(0.2);
-			scoreWhite.setOpacity(1);
-			break;
-		case BLACK:
-			scoreWhite.setOpacity(0.2);
-			scoreBlack.setOpacity(1);
-			break;
-		default:
-			break;
-		}
 		bar.setProgress(black / (black + white));
 		indicator.setProgress((white + black + wall) / 64);
 		if (!board.isRunning()) {
